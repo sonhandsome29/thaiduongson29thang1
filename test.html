@@ -6,10 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="main.js"></script>
+    <style>
+        .deleted-post td {
+            text-decoration: line-through;
+            color: #666;
+        }
+    </style>
 </head>
 
 <body>
     <div>
+        <h2>Posts</h2>
         <table>
             <thead>
                 <tr>
@@ -25,7 +32,6 @@
                 </tr>
             </thead>
             <tbody id="body-table">
-                
             </tbody>
         </table>
     </div>
@@ -35,7 +41,35 @@
         <input type="text" id="views_txt"/>
     </div>
     <div>
-        <input type="submit" value="Save" onclick="Save()"/>
+        <input type="submit" value="Save Post" onclick="SavePost()"/>
+    </div>
+    <div>
+        <h2>Comments</h2>
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        ID
+                    </td>
+                    <td>
+                        Text
+                    </td>
+                    <td>
+                        Post ID
+                    </td>
+                </tr>
+            </thead>
+            <tbody id="body-comment-table">
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <input type="text" id="comment_id_txt"/>
+        <input type="text" id="comment_text_txt"/>
+        <input type="text" id="comment_post_id_txt"/>
+    </div>
+    <div>
+        <input type="submit" value="Save Comment" onclick="SaveComment()"/>
     </div>
 </body>
 
